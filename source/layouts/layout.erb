@@ -5,113 +5,73 @@
    <!-- Always force latest IE rendering engine or request Chrome Frame -->
    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
    <!-- Use title if it's in the page YAML frontmatter -->
-   <title><%= current_page.data.title || "BLE Tech" %></title>
-
-
-
-
+   <title><%= current_page.data.title || "BeemPowered" %></title>
 
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag "all" %>
+  <%= javascript_include_tag  "all" %>
 
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-
-
-
-   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-   <%= stylesheet_link_tag "all" %>
-   <%= javascript_include_tag  "all" %>
  </head>
 
- <body class="<%= page_classes %>">
-
-   <div> <a href="/"> <img class="logo" src="/images/logo.png"> </a> </div>
 
 
-<div class="container">
-    <div class="row">
-    <div class="btn-group btn-group-justified">
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/categories/moreinfo"></a>
+    </div>
 
-
-
-            <div class="btn-group">
-              <button type="button" class="btn btn-nav">
-                <a href="/">
-                    <span class="glyphicon"> <i class="fa fa-home"></i></span>
-                    <p>Home</p>
-                </a>
-                </button>
-            </div>
-
-            <div class="btn-group">
-
-                <button type="button" class="btn btn-nav">
-                  <a href="/categories/newtech/">
-                    <span class="glyphicon"><i class="fa fa-newspaper-o"></i></span>
-                    <p>New Tech</p>
-                  </a>
-                </button>
-            </div>
-
-            <div class="btn-group">
-
-                <button type="button" class="btn btn-nav">
-                  <a href="/categories/science/">
-                    <span class="glyphicon"><i class="fa fa-globe"></i></span>
-                    <p>Science</p>
-                  </a>
-                </button>
-            </div>
-
-
-            <div class="btn-group">
-
-                <button type="button" class="btn btn-nav">
-                  <a href="/categories/reviews/">
-                    <span class="glyphicon"><i class="fa fa-laptop"></i></span>
-                    <p>Reviews</p>
-                  </a>
-                </button>
-            </div>
-
-
-            <div class="btn-group">
-
-                <button type="button" class="btn btn-nav">
-                  <a href="/categories/about/">
-                    <span class="glyphicon"><i class="fa fa-star-half-o"></i></span>
-                    <p>About Us</p>
-                  </a>
-                </button>
-            </div>
-
-            <div class="btn-group">
-
-                <button type="button" class="btn btn-nav">
-                  <a href="/categories/contact/">
-                    <span class="glyphicon"><i class="fa fa-envelope"></i></span>
-                    <p>Contact</p>
-                  </a>
-                </button>
-            </div>
-
-
-        </div>
-  </div>
-</div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/categories/moreinfo">About us</a></li>
+        <li><a href="/categories/livestream">LiveStreams</a></li>
+        <li><a href="/categories/membership">Members</a></li>
+        <li><a href="/categories/staff">Staff</a></li>
+        <li><a href="/categories/socialmedia">SocialMedia</a></li>
+                <li class="dropdown">
+          <a href="/categories/ministries" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ministries <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/categories/ministries">K.A.L.L.</a></li>
+            <li><a href="/categories/ministries">R-12 Transformers Youth Ministry</a></li>
+            <li><a href="/categories/ministries">"Sister, Friend" Women's Ministry</a></li>
+            <li class="divider"></li>
+            <li><a href="/categories/ministries">More TEC</a></li>
+          </ul>
+        </li>
+      </ul>
 
 
 
 
 
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
-   <%= yield %>
-   <!-- The page content -->
+
+
+
+
+   <%= yield %> <!-- The page content -->
 
 
  </body>
